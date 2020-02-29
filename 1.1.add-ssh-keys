@@ -15,6 +15,8 @@ mykey
 # copy the key to the host
 ssh-copy-id -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-pollo
 ssh-copy-id -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-sandy
+ssh-copy-id -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-tally
+ssh-copy-id -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-wasat
 
 # test
 ssh -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-pollo
