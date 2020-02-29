@@ -1,0 +1,19 @@
+# for parallel to access the nodes without a password the
+# public key from the home node needs to be shared
+
+# change wd
+cd ~/.ssh/ 
+
+# generate the key
+ssh-keygen 
+
+# enter file in which to save the key
+mykey
+
+# do NOT enter a passphrase
+
+# copy the key to the host
+ssh-copy-id -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-pollo
+
+# test
+ssh -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-pollo
