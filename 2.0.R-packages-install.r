@@ -29,3 +29,6 @@ for (pack in req_packages) {
     }
 }
 
+# install SAIGE
+install.packages("/home/ubuntu/work/source/SAIGE_0.36.1_R_x86_64-pc-linux-gnu.tar.gz", repos = NULL, type="source")
+
