@@ -25,6 +25,8 @@ sudo apt update
 sudo apt install tcl-dev tk-dev
 sudo apt-get install libssl-dev
 sudo apt-get install libopenblas-dev
+sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libxml2 libxml2-dev
 
 # could be that more packages have to be installed to compile properly
 
