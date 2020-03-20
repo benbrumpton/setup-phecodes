@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 #install required R packages for SAIGE
 
-req_packages <- c("R.utils", "Rcpp", "RcppParallel", "RcppArmadillo", "data.table", "RcppEigen", "Matrix", "methods", "BH", "optparse", "MetaSKAT", "SKAT", "roxygen2", "rversions","devtools")
+req_packages <- c("R.utils", "Rcpp", "RcppParallel", "RcppArmadillo", "data.table", "RcppEigen", "Matrix", "methods", "BH", "optparse", "MetaSKAT", "SKAT", "roxygen2", "rversions","devtools", "inline")
 for (pack in req_packages) {
     if(!require(pack,character.only = TRUE)) {
         install.packages(pack, repos = "http://cran.us.r-project.org")
