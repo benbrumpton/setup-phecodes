@@ -4,6 +4,8 @@ sudo apt-get install parallel
 # add the servers to the sshloginfile
 (echo ssh -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-pollo; echo ssh -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-sandy; echo ssh -i ~/.ssh/mykey ubuntu@hunt-bristol-iaas-tally; echo ssh hunt-bristol-iaas-wasat) > ~/.parallel/my_cluster
 
+echo ssh ubuntu@hunt-phecodes-iaas1 > ~/.parallel/my_cluster
+
 # make sure .ssh/config exist
 touch ~/.ssh/config
 cp ~/.ssh/config ~/.ssh/config.backup
