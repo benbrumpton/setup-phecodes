@@ -23,3 +23,5 @@ rsync -av -P -r /mnt/scratch/mnt-docker ${node}
 #rsync -av -P -r -e "ssh -i /home/benb/.ssh/mykey" /mnt/work/phenotypes/phenotypes-from-data-owners/phecodes ${node}
 #rsync -av -P -r -e ssh -i /home/benb/.ssh/mykey /mnt/scratch/genotypes/toy_HRC_WGS_VCF_RSQ3/ ubuntu@hunt-bristol-iaas-wasat:/home/ubuntu
 #rsync -av -P -r -e "ssh -i /home/benb/.ssh/mykey" /mnt/scratch/basefile_node/pheno ${node}
+
+rsync -av -P ../saige-docker/run.sh ubuntu@hunt-phecodes-iaas1:/home/ubuntu/mnt-docker/saige-docker

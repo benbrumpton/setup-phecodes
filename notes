@@ -1,0 +1,62 @@
+##On the main node
+locale
+vim ~/.bashrc
+
+#insert
+https://docs.hdc.ntnu.no/troubleshooting/compute/#setting-locales-failed
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# install pip
+source ~/.bashrc
+
+# Connect to the node mannualy (this can be automated latter)
+ssh hunt-phecodes-iaas1
+
+# Manually add the node key. The node can then be access without entering the password
+ssh-copy-id ubuntu@hunt-phecodes-iaas1
+
+#create host list
+vim hosts
+
+hunt-phecodes-iaas1 ansible_host=10.5.5.22 ansible_user=ubuntu
+
+ssh-copy-id ubuntu@hunt-phecodes-iaas1
+
+ansible all -m ping -i hosts
+
+vim install_htop.yaml
+
+# insert
+
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install htop
+    apt:
+      name: htop
+      
+ansible-playbook install_htop.yaml -i hosts
+
+ansible-playbook install_htop.yaml -i hosts --diff
+
+# modules notes
+#Ansible
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-with-pip
+sudo apt install python3-pip
+python3 -m pip install --user ansible
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_handlers.html
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html#examples
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html
+
+#Docker
+https://docs.docker.com/config/daemon/#docker-daemon-directory
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+#To-do
+Remote clean-up docker containers
