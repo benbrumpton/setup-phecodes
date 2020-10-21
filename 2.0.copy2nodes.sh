@@ -11,7 +11,8 @@
 #node=ubuntu@hunt-bristol-blue-zaura:/home/ubuntu
 #node=ubuntu@hunt-bristol-iaas-sandy:/home/ubuntu
 #node=ubuntu@hunt-phecodes-iaas1:/home/ubuntu/
-node=ubuntu@hunt-phecodes-blue-korne:/home/ubuntu/
+#node=ubuntu@hunt-phecodes-blue-korne:/home/ubuntu/
+node=ubuntu@hunt-phecodes-blue-spica:/home/ubuntu/
                                    
 #rsync --rsh="sshpass -p "ubuntu" ssh -o StrictHostKeyChecking=no -l benb" /mnt/work/genotypes/hunt600bcfs  ubuntu@hunt-bristol-iaas-pollo:/home/ubuntu/
 
