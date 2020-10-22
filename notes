@@ -19,6 +19,10 @@ ssh-copy-id ubuntu@hunt-phecodes-iaas1
 #create host list
 vim hosts
 
+# find IP
+getent hosts hunt-phecodes-blue-korne
+
+# Then add
 hunt-phecodes-iaas1 ansible_host=10.5.5.22 ansible_user=ubuntu
 
 ssh-copy-id ubuntu@hunt-phecodes-iaas1
@@ -40,6 +44,9 @@ vim install_htop.yaml
 ansible-playbook install_htop.yaml -i hosts
 
 ansible-playbook install_htop.yaml -i hosts --diff
+
+# Update specific host
+ansible-playbook 3.0.install_node.yaml -i hosts --limit hunt-phecodes-blue-korne 
 
 # modules notes
 #Ansible
