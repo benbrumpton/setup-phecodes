@@ -67,3 +67,6 @@ docker rm $(docker ps -a -q)
 
 #To-do
 Remote clean-up docker containers
+ansible-playbook 3.0.install_node.yaml -i hosts --limit hunt-phecodes-blue-anser:hunt-phecodes-blue-murzi --check
+
+ansible-playbook 3.0.install_node.yaml -i hosts --limit hunt-phecodes-blue-achir:hunt-phecodes-blue-alath:hunt-phecodes-blue-albal:hunt-phecodes-blue-antar:hunt-phecodes-blue-avior:hunt-phecodes-blue-becru:hunt-phecodes-blue-bella:hunt-phecodes-blue-chara:hunt-phecodes-blue-heada:hunt-phecodes-blue-homam:hunt-phecodes-blue-hyadu:hunt-phecodes-blue-keida:hunt-phecodes-blue-lesal:hunt-phecodes-blue-maiar:hunt-phecodes-blue-metar:hunt-phecodes-blue-mirac:hunt-phecodes-blue-nusak:hunt-phecodes-blue-salin:hunt-phecodes-blue-shaul:hunt-phecodes-blue-turai:hunt-phecodes-blue-vegal:hunt-phecodes-blue-wezan:hunt-phecodes-blue-yildu --check

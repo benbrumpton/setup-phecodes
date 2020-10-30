@@ -6,6 +6,9 @@ sudo apt-get install parallel
 
 echo ssh ubuntu@hunt-phecodes-iaas1 > ~/.parallel/my_cluster
 
+# Add a specific machine
+echo 'ssh ubuntu@hunt-phecodes-blue-korne' >> ~/.parallel/my_cluster
+
 # make sure .ssh/config exist
 touch ~/.ssh/config
 cp ~/.ssh/config ~/.ssh/config.backup
